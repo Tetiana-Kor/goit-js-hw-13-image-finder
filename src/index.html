@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hw-13</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <!-- <img src="./images/intro.png" alt="" width="640" /> -->
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        class="search-form__input"
+        name="query"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button type="submit" class="search-form__btn">Search</button>
+    </form>
+
+    <ul class="gallery"></ul>
+
+    <button type="button" class="btn is-hidden" data-action="load-more">
+      <span class="label">Load-more</span>
+    </button>
   </body>
 </html>
