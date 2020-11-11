@@ -43,6 +43,8 @@ function fetchCards() {
   loadMoreBtn.disable();
   return imageApiService.fetchImage().then(cards => {
     renderMarkup(cards);
+
+    scrollPage();
     loadMoreBtn.enable();
 
     if (cards.length === 0) {
@@ -76,4 +78,18 @@ function noMatchesFound() {
     text: 'No matches found. Please enter another query!',
     delay: 2500,
   });
+}
+
+function scrollPage() {
+  try {
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }, 1000);
+  } catch (error) {
+    console.log(error);
+  }
 }
