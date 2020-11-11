@@ -42,7 +42,6 @@ function onSearch(e) {
 function fetchCards() {
   loadMoreBtn.disable();
   return imageApiService.fetchImage().then(cards => {
-    console.log(cards);
     renderMarkup(cards);
     loadMoreBtn.enable();
 
