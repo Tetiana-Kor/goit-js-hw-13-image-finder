@@ -108,6 +108,7 @@ img {
 
 .stats {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .stats-item {

@@ -8,7 +8,7 @@ function onGalleryElClick(event) {
     return;
   }
 
-  const changeModalImage = `<img src=${event.target.dataset.source}></img>`;
+  const changeModalImage = `<img src=${event.target.dataset.source} alt="icon" />`;
   const instance = basicLightbox.create(changeModalImage);
 
   instance.show();
